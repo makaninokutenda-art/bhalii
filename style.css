@@ -1,0 +1,238 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffe0eb, #ffb6d0, #fff0f5);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #85445f;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Main cards */
+
+.welcome,
+.card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 550px;
+  padding: 40px 28px;
+  background: rgba(255, 255, 255, 0.93);
+  border: 2px solid #fff;
+  border-radius: 28px;
+  box-shadow: 0 15px 45px #bc527a30;
+  animation: appear 1s ease;
+}
+
+.envelope {
+  font-size: 90px;
+  margin-bottom: 15px;
+  animation: bounce 1.5s infinite;
+}
+
+.big-heart {
+  font-size: 65px;
+  margin: 20px 0;
+  animation: pulse 1.3s infinite;
+}
+
+h1 {
+  color: #d63376;
+  font-size: 34px;
+  margin: 18px 0;
+}
+
+h2 {
+  color: #d63376;
+  font-size: 25px;
+  margin: 22px 0;
+}
+
+p {
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.eyebrow {
+  color: #bd6a8a;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  margin: 15px 5px;
+  padding: 15px 25px;
+  background: #e75480;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #e7548040;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #c93668;
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: #b97894;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 22px;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 10px;
+}
+
+/* Letter */
+
+.letter {
+  white-space: pre-line;
+  text-align: left;
+  line-height: 2;
+  background: #fff1f6;
+  border-radius: 18px;
+  padding: 22px;
+  margin: 25px 0;
+  font-size: 16px;
+}
+
+/* Proposal */
+
+.proposal h2 {
+  line-height: 1.5;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+#response {
+  color: #d63376;
+  font-weight: bold;
+}
+
+/* Celebration */
+
+.rings {
+  font-size: 75px;
+  animation: bounce 1s infinite;
+}
+
+.celebration h1 {
+  font-size: 37px;
+}
+
+.celebration h2 {
+  font-size: 29px;
+}
+
+.celebration-emoji {
+  font-size: 45px;
+  margin: 25px;
+  animation: bounce 0.8s infinite;
+}
+
+.wedding-message {
+  white-space: pre-line;
+  line-height: 2;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 20px;
+}
+
+.small {
+  font-size: 11px;
+  color: #987084;
+}
+
+.signature {
+  font-size: 13px;
+  color: #bd6a8a;
+  margin-top: 25px;
+}
+
+/* Floating hearts */
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: floatUp 7s linear forwards;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .welcome,
+  .card {
+    padding: 30px 19px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .celebration h1 {
+    font-size: 30px;
+  }
+}
